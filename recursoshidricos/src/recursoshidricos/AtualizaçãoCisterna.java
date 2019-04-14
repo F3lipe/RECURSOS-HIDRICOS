@@ -8,7 +8,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 @Entity
-public class AtualizaçãoCisterna implements Identificavel {
+public class AtualizaçãoCisterna implements Identificavel { 
 
 	@Id
 	private Integer id_atualização;
