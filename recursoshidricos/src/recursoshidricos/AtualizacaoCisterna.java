@@ -1,30 +1,35 @@
 package recursoshidricos;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 
 @Entity
-public class AtualizaçãoCisterna implements Identificavel { 
+public class AtualizacaoCisterna implements Identificavel {
 
 	@Id
 	private Integer id_atualização;
 	private Date periodo_agua_atualizada;
+	
 
 	@ManyToOne
 	private CadastroCisterna capacidade_cisterna;
 
 	@ManyToOne
-	private QuantAguaDisponivelCisterna quant_litros_agua;
+	private QuantAguaDisponivelCisterna  quant_litros_agua;
+	
+	
+	
+	
 
-	public AtualizaçãoCisterna() {
+	public AtualizacaoCisterna() {
 		super();
 	}
 
-	public AtualizaçãoCisterna(Integer id_atualização, Date periodo_agua_atualizada,
+	public AtualizacaoCisterna(Integer id_atualização, Date periodo_agua_atualizada,
 			CadastroCisterna capacidade_cisterna, QuantAguaDisponivelCisterna quant_litros_agua) {
 		super();
 		this.id_atualização = id_atualização;
@@ -84,7 +89,7 @@ public class AtualizaçãoCisterna implements Identificavel {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		AtualizaçãoCisterna other = (AtualizaçãoCisterna) obj;
+		AtualizacaoCisterna other = (AtualizacaoCisterna) obj;
 		if (capacidade_cisterna == null) {
 			if (other.capacidade_cisterna != null)
 				return false;
@@ -110,7 +115,7 @@ public class AtualizaçãoCisterna implements Identificavel {
 
 	@Override
 	public String toString() {
-		return "AtualizaçãoCisterna [id_atualização=" + id_atualização + ", periodo_agua_atualizada="
+		return "AtualizacaoCisterna [id_atualização=" + id_atualização + ", periodo_agua_atualizada="
 				+ periodo_agua_atualizada + ", capacidade_cisterna=" + capacidade_cisterna + ", quant_litros_agua="
 				+ quant_litros_agua + "]";
 	}

@@ -12,19 +12,20 @@ public class MonitoramentoCisterna implements Identificavel {
 	@Id
 	private Integer id_monitoramento;
 	private Date monitoramento;
+	
 
 	@OneToMany(mappedBy = "quant_litros_agua")
-	private Set<AtualizaçãoCisterna> agua_gasta;
+	private Set<AtualizacaoCisterna> agua_gasta;
 	
 	@OneToMany(mappedBy = "quant_litros_agua")
-	private Set<AtualizaçãoCisterna> agua_economizada;
+	private Set<AtualizacaoCisterna> agua_economizada; 
 
 	public MonitoramentoCisterna() {
 		super();
 	}
 
-	public MonitoramentoCisterna(Integer id_monitoramento, Date monitoramento, Set<AtualizaçãoCisterna> agua_gasta,
-			Set<AtualizaçãoCisterna> agua_economizada) {
+	public MonitoramentoCisterna(Integer id_monitoramento, Date monitoramento, Set<AtualizacaoCisterna> agua_gasta,
+			Set<AtualizacaoCisterna> agua_economizada) {
 		super();
 		this.id_monitoramento = id_monitoramento;
 		this.monitoramento = monitoramento;
@@ -48,19 +49,19 @@ public class MonitoramentoCisterna implements Identificavel {
 		this.monitoramento = monitoramento;
 	}
 
-	public Set<AtualizaçãoCisterna> getAgua_gasta() {
+	public Set<AtualizacaoCisterna> getAgua_gasta() {
 		return agua_gasta;
 	}
 
-	public void setAgua_gasta(Set<AtualizaçãoCisterna> agua_gasta) {
+	public void setAgua_gasta(Set<AtualizacaoCisterna> agua_gasta) {
 		this.agua_gasta = agua_gasta;
 	}
 
-	public Set<AtualizaçãoCisterna> getAgua_economizada() {
+	public Set<AtualizacaoCisterna> getAgua_economizada() {
 		return agua_economizada;
 	}
 
-	public void setAgua_economizada(Set<AtualizaçãoCisterna> agua_economizada) {
+	public void setAgua_economizada(Set<AtualizacaoCisterna> agua_economizada) {
 		this.agua_economizada = agua_economizada;
 	}
 
