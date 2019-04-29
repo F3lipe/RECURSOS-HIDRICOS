@@ -12,13 +12,12 @@ public class MonitoramentoCisterna implements Identificavel {
 	@Id
 	private Integer id_monitoramento;
 	private Date monitoramento;
-	
 
 	@OneToMany(mappedBy = "quant_litros_agua")
 	private Set<AtualizacaoCisterna> agua_gasta;
-	
+
 	@OneToMany(mappedBy = "quant_litros_agua")
-	private Set<AtualizacaoCisterna> agua_economizada; 
+	private Set<AtualizacaoCisterna> agua_economizada;
 
 	public MonitoramentoCisterna() {
 		super();

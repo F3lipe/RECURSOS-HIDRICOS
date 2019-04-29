@@ -1,6 +1,5 @@
 package recursoshidricos;
 
-import java.util.ArrayList;
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -13,17 +12,12 @@ public class AtualizacaoCisterna implements Identificavel {
 	@Id
 	private Integer id_atualização;
 	private Date periodo_agua_atualizada;
-	
 
 	@ManyToOne
 	private CadastroCisterna capacidade_cisterna;
 
 	@ManyToOne
-	private QuantAguaDisponivelCisterna  quant_litros_agua;
-	
-	
-	
-	
+	private QuantAguaDisponivelCisterna quant_litros_agua;
 
 	public AtualizacaoCisterna() {
 		super();

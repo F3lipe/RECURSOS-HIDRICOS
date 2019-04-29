@@ -7,17 +7,17 @@ import javax.persistence.Id;
 public class QuantAguaDisponivelCisterna implements Identificavel {
 	@Id
 	private Integer id_aguadisponivel;
-	private Double quant_litros_agua;
+	private Double quantLitrosAgua;
 
 
 	public QuantAguaDisponivelCisterna() {
 		super();
 	}
 
-	public QuantAguaDisponivelCisterna(Integer id_aguadisponivel, Double quant_litros_agua) {
+	public QuantAguaDisponivelCisterna(Integer id_aguadisponivel, Double quantLitrosAgua) {
 		super();
 		this.id_aguadisponivel = id_aguadisponivel;
-		this.quant_litros_agua = quant_litros_agua;
+		this.quantLitrosAgua = quantLitrosAgua;
 	}
 
 	public Integer getId_aguadisponivel() {
@@ -28,12 +28,12 @@ public class QuantAguaDisponivelCisterna implements Identificavel {
 		this.id_aguadisponivel = id_aguadisponivel;
 	}
 
-	public Double getQuant_litros_agua() {
-		return quant_litros_agua;
+	public Double getquantLitrosAgua() {
+		return quantLitrosAgua;
 	}
 
-	public void setQuant_litros_agua(Double quant_litros_agua) {
-		this.quant_litros_agua = quant_litros_agua;
+	public void setquantLitrosAgua(Double quantLitrosAgua) {
+		this.quantLitrosAgua = quantLitrosAgua;
 	}
 
 	@Override
@@ -41,7 +41,7 @@ public class QuantAguaDisponivelCisterna implements Identificavel {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((id_aguadisponivel == null) ? 0 : id_aguadisponivel.hashCode());
-		result = prime * result + ((quant_litros_agua == null) ? 0 : quant_litros_agua.hashCode());
+		result = prime * result + ((quantLitrosAgua == null) ? 0 : quantLitrosAgua.hashCode());
 		return result;
 	}
 
@@ -59,18 +59,18 @@ public class QuantAguaDisponivelCisterna implements Identificavel {
 				return false;
 		} else if (!id_aguadisponivel.equals(other.id_aguadisponivel))
 			return false;
-		if (quant_litros_agua == null) {
-			if (other.quant_litros_agua != null)
+		if (quantLitrosAgua == null) {
+			if (other.quantLitrosAgua != null)
 				return false;
-		} else if (!quant_litros_agua.equals(other.quant_litros_agua))
+		} else if (!quantLitrosAgua.equals(other.quantLitrosAgua))
 			return false;
 		return true;
 	}
 
 	@Override
 	public String toString() {
-		return "QuantAguaDisponivelCisterna [id_aguadisponivel=" + id_aguadisponivel + ", quant_litros_agua="
-				+ quant_litros_agua + "]";
+		return "QuantAguaDisponivelCisterna [id_aguadisponivel=" + id_aguadisponivel + ", quantLitrosAgua="
+				+ quantLitrosAgua + "]";
 	}
 
 	@Override
