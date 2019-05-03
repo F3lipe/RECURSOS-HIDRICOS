@@ -24,7 +24,7 @@ class TesteProjeto {
 		Recursos_Hidricos r = null;
 		CadastroCisterna cisterna = new CadastroCisterna();
 		CadastroCisterna cr = r.Remover_cisterna(id_cisterna, capacidade_cisterna);
-		assertNotNull(cr);
+		assertNotNull(cr); 
 		assertEquals(cisterna, cr.getId_Cisterna());
 	}
 
