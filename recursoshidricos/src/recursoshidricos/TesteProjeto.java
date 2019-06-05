@@ -1,11 +1,8 @@
 package recursoshidricos;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.hibernate.result.NoMoreReturnsException;
 import org.junit.jupiter.api.Test;
 
 class TesteProjeto {
