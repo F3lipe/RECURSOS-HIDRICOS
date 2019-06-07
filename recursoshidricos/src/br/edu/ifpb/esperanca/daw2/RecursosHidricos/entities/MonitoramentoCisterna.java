@@ -1,4 +1,4 @@
-package recursoshidricos;
+package br.edu.ifpb.esperanca.daw2.RecursosHidricos.entities;
 
 import java.util.Date;
 import java.util.Set;
@@ -14,6 +14,8 @@ public class MonitoramentoCisterna implements Identificavel {
 	private Date monitoramento;
 	private Double quant_AguaGasta_Tempo;
 	private Double quant_AguaEconomizada_Tempo;
+	
+	
 	
 
 	@OneToMany(mappedBy = "quant_litros_agua")
@@ -161,6 +163,8 @@ public class MonitoramentoCisterna implements Identificavel {
 	public MonitoramentoCisterna() {
 		super();
 		// TODO Auto-generated constructor stub
+	}
+
 	}
 
 	

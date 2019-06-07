@@ -1,9 +1,12 @@
+package br.edu.ifpb.esperanca.daw2.RecursosHidricos.entities;
 import java.sql.Date;
 
-public class Irrigacao {
+public class Irrigacao implements Identificavel {
 	private Long id;
 	private Double tempo_Irrigacao;
 	private Date dias_De_irrigacao;
+	
+	
 	public Long getId() {
 		return id;
 	}
@@ -27,14 +30,18 @@ public class Irrigacao {
 		return "Irrigacao [id=" + id + ", tempo_Irrigacao=" + tempo_Irrigacao + ", dias_De_irrigacao="
 				+ dias_De_irrigacao + "]";
 	}
-	public Irrigacao() {
-		super();
-	}
+	
+	
+	
+	
 	public Irrigacao(Long id, Double tempo_Irrigacao, Date dias_De_irrigacao) {
 		super();
 		this.id = id;
 		this.tempo_Irrigacao = tempo_Irrigacao;
 		this.dias_De_irrigacao = dias_De_irrigacao;
+	}
+	public Irrigacao() {
+		super();
 	}
 	@Override
 	public int hashCode() {

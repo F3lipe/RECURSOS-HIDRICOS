@@ -1,4 +1,4 @@
-package recursoshidricos;
+package br.edu.ifpb.esperanca.daw2.RecursosHidricos.entities;
 
 
 import javax.persistence.Entity;
@@ -15,6 +15,9 @@ public class Usuario implements Identificavel{
 	private int numero_Telefone;
 	private String email;
 	private String estado;
+	
+	
+	
 
 	public Usuario() {
 		super();
