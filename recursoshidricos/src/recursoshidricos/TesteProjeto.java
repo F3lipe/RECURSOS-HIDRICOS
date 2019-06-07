@@ -31,10 +31,10 @@ class TesteProjeto {
 	}
 
 	@Test
-	void Atualizar_cisterna(AtualizacaoCisterna atualizacao) {
-		Recursos_Hidricos a = null;
+	void Atualizar_cisterna() {
+		
 		AtualizacaoCisterna cisterna = new AtualizacaoCisterna();
-		AtualizacaoCisterna ac = a.Atualizar_Cisterna(atualizacao);
+		
 		assertNotNull(ac);
 		assertEquals(cisterna, ac.getId_atualização());
 	}
@@ -43,7 +43,7 @@ class TesteProjeto {
 	void Monitorar_Cisterna(MonitoramentoCisterna monitorar) {
 		Recursos_Hidricos m = null;
 		MonitoramentoCisterna cisterna = new MonitoramentoCisterna();
-		MonitoramentoCisterna m = monitorar.Monitorar_Cisterna(monitorar);
+		MonitoramentoCisterna m = monitorar.MonitorarCisterna(monitorar);
 		assertNotNull(m);
 		assertEquals(cisterna, m.getId_monitoramento());
 	}

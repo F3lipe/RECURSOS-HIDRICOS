@@ -14,21 +14,18 @@ public class AtualizacaoCisterna implements Identificavel {
 	private Date periodo_agua_atualizada;
 
 	@ManyToOne
-	private Cisterna capacidade_cisterna;
+	private Cisterna cisterna;
 
-	@ManyToOne
-	private Cisterna quant_litros_agua;
+	private Integer quant_litros_agua;
 
 	@Override
 	public Long getId() {
-		// TODO Auto-generated method stub
-		return null;
+		return id_atualização;
 	}
 
 	@Override
 	public void setId(Long id) {
-		// TODO Auto-generated method stub
-		
+		id_atualização = id;
 	}
 
 	public Long getId_atualização() {
