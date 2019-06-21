@@ -2,13 +2,17 @@ package br.edu.ifpb.esperanca.daw2.RecursosHidricos.entities;
 
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 
 @Entity
 public class Usuario implements Identificavel{
 	
 	@Id 
-	
+	@GeneratedValue(generator="usu_seq", strategy=GenerationType.SEQUENCE)
+	@SequenceGenerator(name="usu_seq")
 	private Long id;
 	private String nome;
 	private String cidade;

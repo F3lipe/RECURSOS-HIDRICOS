@@ -3,13 +3,18 @@ package br.edu.ifpb.esperanca.daw2.RecursosHidricos.entities;
 import java.util.ArrayList;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 
 @Entity
 public class Cisterna implements Identificavel {
 
 	@Id
-	private Integer id_Cisterna;
+	@GeneratedValue(generator="cis_seq", strategy=GenerationType.SEQUENCE)
+	@SequenceGenerator(name="cis_seq")
+	private Long id;
 	
 	private Double largura_cisterna;
 	private Double profundidade_cisterna;
@@ -23,20 +28,15 @@ public class Cisterna implements Identificavel {
 	
 	@Override
 	public Long getId() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return id;
 	}
 	@Override
 	public void setId(Long id) {
-		// TODO Auto-generated method stub
+		this.id=id;
 		
 	}
-	public Integer getId_Cisterna() {
-		return id_Cisterna;
-	}
-	public void setId_Cisterna(Integer id_Cisterna) {
-		this.id_Cisterna = id_Cisterna;
-	}
+	
 	public Double getLargura_cisterna() {
 		return largura_cisterna;
 	}
@@ -80,7 +80,7 @@ public class Cisterna implements Identificavel {
 		result = prime * result + ((capacidade_cisterna == null) ? 0 : capacidade_cisterna.hashCode());
 		result = prime * result + ((cisternas == null) ? 0 : cisternas.hashCode());
 		result = prime * result + ((comprimento_cisterna == null) ? 0 : comprimento_cisterna.hashCode());
-		result = prime * result + ((id_Cisterna == null) ? 0 : id_Cisterna.hashCode());
+		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		result = prime * result + ((largura_cisterna == null) ? 0 : largura_cisterna.hashCode());
 		result = prime * result + ((profundidade_cisterna == null) ? 0 : profundidade_cisterna.hashCode());
 		result = prime * result + ((quantLitrosAgua == null) ? 0 : quantLitrosAgua.hashCode());
@@ -110,10 +110,10 @@ public class Cisterna implements Identificavel {
 				return false;
 		} else if (!comprimento_cisterna.equals(other.comprimento_cisterna))
 			return false;
-		if (id_Cisterna == null) {
-			if (other.id_Cisterna != null)
+		if (id == null) {
+			if (other.id != null)
 				return false;
-		} else if (!id_Cisterna.equals(other.id_Cisterna))
+		} else if (!id.equals(other.id))
 			return false;
 		if (largura_cisterna == null) {
 			if (other.largura_cisterna != null)
@@ -134,7 +134,7 @@ public class Cisterna implements Identificavel {
 	}
 	@Override
 	public String toString() {
-		return "CadastroCisterna [id_Cisterna=" + id_Cisterna + ", largura_cisterna=" + largura_cisterna
+		return "CadastroCisterna [id_Cisterna=" + id + ", largura_cisterna=" + largura_cisterna
 				+ ", profundidade_cisterna=" + profundidade_cisterna + ", comprimento_cisterna=" + comprimento_cisterna
 				+ ", capacidade_cisterna=" + capacidade_cisterna + ", cisternas=" + cisternas + ", quantLitrosAgua="
 				+ quantLitrosAgua + "]";
