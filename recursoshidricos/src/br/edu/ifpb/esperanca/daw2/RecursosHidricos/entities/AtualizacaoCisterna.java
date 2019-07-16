@@ -23,7 +23,7 @@ public class AtualizacaoCisterna implements Identificavel {
 	}
 
 	public void setId_atualização(Long id_atualização) {
-		this.id_atualização = id_atualização;
+		this.id_atualização = id_atualização; 
 	}
 
 	public Date getPeriodo_agua_atualizada() {
