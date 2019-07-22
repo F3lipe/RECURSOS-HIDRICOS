@@ -13,11 +13,10 @@ class CisternaServiceTest {
 	void gerenciarCisterna() {
 		CisternaService service = new CisternaService ();
 		Cisterna c = new Cisterna();
-		c.setCapacidade_cisterna(10000.0);
-		c.setComprimento_cisterna(1000.0);
-		c.setLargura_cisterna(1000.0);
-		c.setProfundidade_cisterna(200.00);
-		c.setQuantLitrosAgua(1000.00);
+		c.setCapacidadeCisterna(10000.0);
+		c.setComprimentoCisterna(1000.0);
+		c.setLarguraCisterna(1000.0);
+		c.setProfundidadeCisterna(200.00);
 		service.save(c);
 		assertNotNull(c.getId());
 	

@@ -15,8 +15,8 @@ class IrrigacaoServiceTest {
 		IrrigacaoService service = new IrrigacaoService();
 		Irrigacao i = new Irrigacao();
 		i.setId(578L);
-		i.setTempo_Irrigacao(2.4);
-		i.setDias_De_irrigacao(null);
+		i.setTempoIrrigacao(2.4);
+		i.setDiasDeIrrigacao(null);
 		service.save(i);
 		assertNotNull(i.getId());
 		Irrigacao outro = service.getByID(i.getId());

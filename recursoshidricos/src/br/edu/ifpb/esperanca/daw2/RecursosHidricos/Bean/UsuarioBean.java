@@ -62,7 +62,7 @@ public class UsuarioBean implements Serializable {
 		save();
 	}
 
-	public void limpar() {
+	public void limpar() { 
 		entidades = getService().getAll();
 		entidade = newEntidade();
 	}

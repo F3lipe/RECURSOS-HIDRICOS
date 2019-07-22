@@ -6,8 +6,10 @@ public class Producao implements Identificavel{
 	private Long id;
 	private String cultivoPlantado;
 	private Date dataDoPlantio;
-	private Double Quant_Plantada_P_Area;
-	private Double Quant_Agua_Gasta;
+	private Double QuantPlantadaPArea;
+	private Double QuantAguaGasta;
+	
+	
 	
 	public Long getId() {
 		return id;
@@ -27,28 +29,24 @@ public class Producao implements Identificavel{
 	public void setDataDoPlantio(Date dataDoPlantio) {
 		this.dataDoPlantio = dataDoPlantio;
 	}
-	public Double getQuant_Plantada_P_Area() {
-		return Quant_Plantada_P_Area;
+	public Double getQuantPlantadaPArea() {
+		return QuantPlantadaPArea;
 	}
-	public void setQuant_Plantada_P_Area(Double quant_Plantada_P_Area) {
-		Quant_Plantada_P_Area = quant_Plantada_P_Area;
+	public void setQuantPlantadaPArea(Double quantPlantadaPArea) {
+		QuantPlantadaPArea = quantPlantadaPArea;
 	}
-	public Double getQuant_Agua_Gasta() {
-		return Quant_Agua_Gasta;
+	public Double getQuantAguaGasta() {
+		return QuantAguaGasta;
 	}
-	public void setQuant_Agua_Gasta(Double quant_Agua_Gasta) {
-		Quant_Agua_Gasta = quant_Agua_Gasta;
-	}
-	public Producao() {
-		super();
-		// TODO Auto-generated constructor stub
+	public void setQuantAguaGasta(Double quantAguaGasta) {
+		QuantAguaGasta = quantAguaGasta;
 	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((Quant_Agua_Gasta == null) ? 0 : Quant_Agua_Gasta.hashCode());
-		result = prime * result + ((Quant_Plantada_P_Area == null) ? 0 : Quant_Plantada_P_Area.hashCode());
+		result = prime * result + ((QuantAguaGasta == null) ? 0 : QuantAguaGasta.hashCode());
+		result = prime * result + ((QuantPlantadaPArea == null) ? 0 : QuantPlantadaPArea.hashCode());
 		result = prime * result + ((cultivoPlantado == null) ? 0 : cultivoPlantado.hashCode());
 		result = prime * result + ((dataDoPlantio == null) ? 0 : dataDoPlantio.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
@@ -63,15 +61,15 @@ public class Producao implements Identificavel{
 		if (getClass() != obj.getClass())
 			return false;
 		Producao other = (Producao) obj;
-		if (Quant_Agua_Gasta == null) {
-			if (other.Quant_Agua_Gasta != null)
+		if (QuantAguaGasta == null) {
+			if (other.QuantAguaGasta != null)
 				return false;
-		} else if (!Quant_Agua_Gasta.equals(other.Quant_Agua_Gasta))
+		} else if (!QuantAguaGasta.equals(other.QuantAguaGasta))
 			return false;
-		if (Quant_Plantada_P_Area == null) {
-			if (other.Quant_Plantada_P_Area != null)
+		if (QuantPlantadaPArea == null) {
+			if (other.QuantPlantadaPArea != null)
 				return false;
-		} else if (!Quant_Plantada_P_Area.equals(other.Quant_Plantada_P_Area))
+		} else if (!QuantPlantadaPArea.equals(other.QuantPlantadaPArea))
 			return false;
 		if (cultivoPlantado == null) {
 			if (other.cultivoPlantado != null)
@@ -90,6 +88,25 @@ public class Producao implements Identificavel{
 			return false;
 		return true;
 	}
+	@Override
+	public String toString() {
+		return "Producao [id=" + id + ", cultivoPlantado=" + cultivoPlantado + ", dataDoPlantio=" + dataDoPlantio
+				+ ", QuantPlantadaPArea=" + QuantPlantadaPArea + ", QuantAguaGasta=" + QuantAguaGasta + "]";
+	}
+	public Producao(Long id, String cultivoPlantado, Date dataDoPlantio, Double quantPlantadaPArea,
+			Double quantAguaGasta) {
+		super();
+		this.id = id;
+		this.cultivoPlantado = cultivoPlantado;
+		this.dataDoPlantio = dataDoPlantio;
+		QuantPlantadaPArea = quantPlantadaPArea;
+		QuantAguaGasta = quantAguaGasta;
+	}
+	public Producao() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
 	
 
 }

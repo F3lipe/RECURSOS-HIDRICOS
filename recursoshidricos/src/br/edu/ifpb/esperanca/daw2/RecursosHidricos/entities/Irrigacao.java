@@ -3,53 +3,33 @@ import java.sql.Date;
 
 public class Irrigacao implements Identificavel {
 	private Long id;
-	private Double tempo_Irrigacao;
-	private Date dias_De_irrigacao;
-	
-	
+	private Double tempoIrrigacao;
+	private Date diasDeIrrigacao;
 	public Long getId() {
 		return id;
 	}
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public Double getTempo_Irrigacao() {
-		return tempo_Irrigacao;
+	public Double getTempoIrrigacao() {
+		return tempoIrrigacao;
 	}
-	public void setTempo_Irrigacao(Double tempo_Irrigacao) {
-		this.tempo_Irrigacao = tempo_Irrigacao;
+	public void setTempoIrrigacao(Double tempoIrrigacao) {
+		this.tempoIrrigacao = tempoIrrigacao;
 	}
-	public Date getDias_De_irrigacao() {
-		return dias_De_irrigacao;
+	public Date getDiasDeIrrigacao() {
+		return diasDeIrrigacao;
 	}
-	public void setDias_De_irrigacao(Date dias_De_irrigacao) {
-		this.dias_De_irrigacao = dias_De_irrigacao;
-	}
-	@Override
-	public String toString() {
-		return "Irrigacao [id=" + id + ", tempo_Irrigacao=" + tempo_Irrigacao + ", dias_De_irrigacao="
-				+ dias_De_irrigacao + "]";
-	}
-	
-	
-	
-	
-	public Irrigacao(Long id, Double tempo_Irrigacao, Date dias_De_irrigacao) {
-		super();
-		this.id = id;
-		this.tempo_Irrigacao = tempo_Irrigacao;
-		this.dias_De_irrigacao = dias_De_irrigacao;
-	}
-	public Irrigacao() {
-		super();
+	public void setDiasDeIrrigacao(Date diasDeIrrigacao) {
+		this.diasDeIrrigacao = diasDeIrrigacao;
 	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((dias_De_irrigacao == null) ? 0 : dias_De_irrigacao.hashCode());
+		result = prime * result + ((diasDeIrrigacao == null) ? 0 : diasDeIrrigacao.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
-		result = prime * result + ((tempo_Irrigacao == null) ? 0 : tempo_Irrigacao.hashCode());
+		result = prime * result + ((tempoIrrigacao == null) ? 0 : tempoIrrigacao.hashCode());
 		return result;
 	}
 	@Override
@@ -61,22 +41,40 @@ public class Irrigacao implements Identificavel {
 		if (getClass() != obj.getClass())
 			return false;
 		Irrigacao other = (Irrigacao) obj;
-		if (dias_De_irrigacao == null) {
-			if (other.dias_De_irrigacao != null)
+		if (diasDeIrrigacao == null) {
+			if (other.diasDeIrrigacao != null)
 				return false;
-		} else if (!dias_De_irrigacao.equals(other.dias_De_irrigacao))
+		} else if (!diasDeIrrigacao.equals(other.diasDeIrrigacao))
 			return false;
 		if (id == null) {
 			if (other.id != null)
 				return false;
 		} else if (!id.equals(other.id))
 			return false;
-		if (tempo_Irrigacao == null) {
-			if (other.tempo_Irrigacao != null)
+		if (tempoIrrigacao == null) {
+			if (other.tempoIrrigacao != null)
 				return false;
-		} else if (!tempo_Irrigacao.equals(other.tempo_Irrigacao))
+		} else if (!tempoIrrigacao.equals(other.tempoIrrigacao))
 			return false;
 		return true;
 	}
+	@Override
+	public String toString() {
+		return "Irrigacao [id=" + id + ", tempoIrrigacao=" + tempoIrrigacao + ", diasDeIrrigacao=" + diasDeIrrigacao
+				+ "]";
+	}
+	public Irrigacao(Long id, Double tempoIrrigacao, Date diasDeIrrigacao) {
+		super();
+		this.id = id;
+		this.tempoIrrigacao = tempoIrrigacao;
+		this.diasDeIrrigacao = diasDeIrrigacao;
+	}
+	public Irrigacao() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	
 	
 }

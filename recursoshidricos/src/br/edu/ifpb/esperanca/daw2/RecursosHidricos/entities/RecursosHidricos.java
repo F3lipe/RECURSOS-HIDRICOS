@@ -1,11 +1,11 @@
 package br.edu.ifpb.esperanca.daw2.RecursosHidricos.entities;
 
-public interface Recursos_Hidricos extends Identificavel {
+public interface RecursosHidricos extends Identificavel {
 
 	//CISTERNA
 	
 	public Cisterna AdicionarCisterna(Cisterna adicionarCisterna);
-	public Cisterna RemoverCisterna(Integer id_cisterna, Double capacidade_cisterna);
+	public Cisterna RemoverCisterna(Integer idCisterna, Double capacidadeCisterna);
 	public Cisterna AtualizarCisterna (Cisterna atualizar);
 	public Cisterna AdicionarLargura (Cisterna adicionarLargura);
 	public Cisterna RemoverLargura(Cisterna removerLargura); 
@@ -14,8 +14,8 @@ public interface Recursos_Hidricos extends Identificavel {
 	
 	//MONITORAMENTO
 	
-	public MonitoramentoCisterna AtualizarAguaGastaporTempo(MonitoramentoCisterna atualizar_AguaGasta_porTempo);
-	public MonitoramentoCisterna AtualizarQuantidadeAguaEconomizada(MonitoramentoCisterna Atualizar_Quantidade_AguaEconomizada);
+	public MonitoramentoCisterna AtualizarAguaGastaporTempo(MonitoramentoCisterna atualizarAguaGastaporTempo);
+	public MonitoramentoCisterna AtualizarQuantidadeAguaEconomizada(MonitoramentoCisterna AtualizarQuantidadeAguaEconomizada);
 
 	//ATUALIZAÇÃO
 	
@@ -26,22 +26,22 @@ public interface Recursos_Hidricos extends Identificavel {
 	
 	public Producao AdicionarPlantio (Producao AdicionarPlantio);
 	public Producao AtualizarPlantio (Producao AtualizarPlantio);
-	public Producao AddAguaGasta    (Producao Add_Agua_Gasta  );
-	public Producao AddPeriodoPlantado (Producao Add_Periodo_Plantado);
-	public Producao AtualizarPeriodoPlantado (Producao Atualizar_Periodo_Plantado);
+	public Producao AddAguaGasta    (Producao AddAguaGasta  );
+	public Producao AddPeriodoPlantado (Producao AddPeriodoPlantado);
+	public Producao AtualizarPeriodoPlantado (Producao AtualizarPeriodoPlantado);
 	public Producao AddDatePlantacao (Producao Add_Date_Plantacao );
-	public Producao AtualizarDatePlantacao (Producao Atualizar_Date_Plantacao);
+	public Producao AtualizarDatePlantacao (Producao AtualizarDatePlantacao);
 	
 	//USUARIO
 	
-	public Usuario AdicionarNome  (Usuario Adicionar_Nome);
-	public Usuario AdicionarEndereco(Usuario Adcionar_Endereco);
-	public Usuario AdicionarEmail(Usuario Adicionar_Email);
+	public Usuario AdicionarNome  (Usuario AdicionarNome);
+	public Usuario AdicionarEndereco(Usuario AdcionarEndereco);
+	public Usuario AdicionarEmail(Usuario AdicionarEmail);
 	
 	//IRRIGAÇÃO
 	
-	public Irrigacao AdicionarTempoIrrigacao(Irrigacao Adicionar_Tempo_Irrigacao);
-	public Irrigacao AdicionarDiasIrrigacao(Irrigacao Adicionar_Dias_Irrigacao);
+	public Irrigacao AdicionarTempoIrrigacao(Irrigacao AdicionarTempoIrrigacao);
+	public Irrigacao AdicionarDiasIrrigacao(Irrigacao AdicionarDiasIrrigacao);
 	
 	//
 	public Cisterna Capacidade_cisterna(Cisterna cisterna);

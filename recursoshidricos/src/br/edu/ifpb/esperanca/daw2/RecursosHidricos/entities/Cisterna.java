@@ -16,50 +16,40 @@ public class Cisterna implements Identificavel {
 	@SequenceGenerator(name="cis_seq")
 	private Long id;
 	
-	private Double largura_cisterna;
-	private Double profundidade_cisterna;
-	private Double comprimento_cisterna;
-	private Double capacidade_cisterna;
-	private ArrayList<Cisterna> cisternas;
-	private Double quantLitrosAgua;
-	
-	
-	
-	
-	@Override
+	private Double larguraCisterna;
+	private Double profundidadeCisterna;
+	private Double comprimentoCisterna;
+	private Double capacidadeCisterna;
+	//private ArrayList<Cisterna> cisternas;
 	public Long getId() {
-		
 		return id;
 	}
-	@Override
 	public void setId(Long id) {
-		this.id=id;
-		
+		this.id = id;
 	}
-	
-	public Double getLargura_cisterna() {
-		return largura_cisterna;
+	public Double getLarguraCisterna() {
+		return larguraCisterna;
 	}
-	public void setLargura_cisterna(Double largura_cisterna) {
-		this.largura_cisterna = largura_cisterna;
+	public void setLarguraCisterna(Double larguraCisterna) {
+		this.larguraCisterna = larguraCisterna;
 	}
-	public Double getProfundidade_cisterna() {
-		return profundidade_cisterna;
+	public Double getProfundidadeCisterna() {
+		return profundidadeCisterna;
 	}
-	public void setProfundidade_cisterna(Double profundidade_cisterna) {
-		this.profundidade_cisterna = profundidade_cisterna;
+	public void setProfundidadeCisterna(Double profundidadeCisterna) {
+		this.profundidadeCisterna = profundidadeCisterna;
 	}
-	public Double getComprimento_cisterna() {
-		return comprimento_cisterna;
+	public Double getComprimentoCisterna() {
+		return comprimentoCisterna;
 	}
-	public void setComprimento_cisterna(Double comprimento_cisterna) {
-		this.comprimento_cisterna = comprimento_cisterna;
+	public void setComprimentoCisterna(Double comprimentoCisterna) {
+		this.comprimentoCisterna = comprimentoCisterna;
 	}
-	public Double getCapacidade_cisterna() {
-		return capacidade_cisterna;
+	public Double getCapacidadeCisterna() {
+		return capacidadeCisterna;
 	}
-	public void setCapacidade_cisterna(Double capacidade_cisterna) {
-		this.capacidade_cisterna = capacidade_cisterna;
+	public void setCapacidadeCisterna(Double capacidadeCisterna) {
+		this.capacidadeCisterna = capacidadeCisterna;
 	}
 	public ArrayList<Cisterna> getCisternas() {
 		return cisternas;
@@ -67,23 +57,16 @@ public class Cisterna implements Identificavel {
 	public void setCisternas(ArrayList<Cisterna> cisternas) {
 		this.cisternas = cisternas;
 	}
-	public Double getQuantLitrosAgua() {
-		return quantLitrosAgua;
-	}
-	public void setQuantLitrosAgua(Double quantLitrosAgua) {
-		this.quantLitrosAgua = quantLitrosAgua;
-	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((capacidade_cisterna == null) ? 0 : capacidade_cisterna.hashCode());
+		result = prime * result + ((capacidadeCisterna == null) ? 0 : capacidadeCisterna.hashCode());
 		result = prime * result + ((cisternas == null) ? 0 : cisternas.hashCode());
-		result = prime * result + ((comprimento_cisterna == null) ? 0 : comprimento_cisterna.hashCode());
+		result = prime * result + ((comprimentoCisterna == null) ? 0 : comprimentoCisterna.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
-		result = prime * result + ((largura_cisterna == null) ? 0 : largura_cisterna.hashCode());
-		result = prime * result + ((profundidade_cisterna == null) ? 0 : profundidade_cisterna.hashCode());
-		result = prime * result + ((quantLitrosAgua == null) ? 0 : quantLitrosAgua.hashCode());
+		result = prime * result + ((larguraCisterna == null) ? 0 : larguraCisterna.hashCode());
+		result = prime * result + ((profundidadeCisterna == null) ? 0 : profundidadeCisterna.hashCode());
 		return result;
 	}
 	@Override
@@ -95,59 +78,60 @@ public class Cisterna implements Identificavel {
 		if (getClass() != obj.getClass())
 			return false;
 		Cisterna other = (Cisterna) obj;
-		if (capacidade_cisterna == null) {
-			if (other.capacidade_cisterna != null)
+		if (capacidadeCisterna == null) {
+			if (other.capacidadeCisterna != null)
 				return false;
-		} else if (!capacidade_cisterna.equals(other.capacidade_cisterna))
+		} else if (!capacidadeCisterna.equals(other.capacidadeCisterna))
 			return false;
 		if (cisternas == null) {
 			if (other.cisternas != null)
 				return false;
 		} else if (!cisternas.equals(other.cisternas))
 			return false;
-		if (comprimento_cisterna == null) {
-			if (other.comprimento_cisterna != null)
+		if (comprimentoCisterna == null) {
+			if (other.comprimentoCisterna != null)
 				return false;
-		} else if (!comprimento_cisterna.equals(other.comprimento_cisterna))
+		} else if (!comprimentoCisterna.equals(other.comprimentoCisterna))
 			return false;
 		if (id == null) {
 			if (other.id != null)
 				return false;
 		} else if (!id.equals(other.id))
 			return false;
-		if (largura_cisterna == null) {
-			if (other.largura_cisterna != null)
+		if (larguraCisterna == null) {
+			if (other.larguraCisterna != null)
 				return false;
-		} else if (!largura_cisterna.equals(other.largura_cisterna))
+		} else if (!larguraCisterna.equals(other.larguraCisterna))
 			return false;
-		if (profundidade_cisterna == null) {
-			if (other.profundidade_cisterna != null)
+		if (profundidadeCisterna == null) {
+			if (other.profundidadeCisterna != null)
 				return false;
-		} else if (!profundidade_cisterna.equals(other.profundidade_cisterna))
-			return false;
-		if (quantLitrosAgua == null) {
-			if (other.quantLitrosAgua != null)
-				return false;
-		} else if (!quantLitrosAgua.equals(other.quantLitrosAgua))
+		} else if (!profundidadeCisterna.equals(other.profundidadeCisterna))
 			return false;
 		return true;
 	}
 	@Override
 	public String toString() {
-		return "CadastroCisterna [id_Cisterna=" + id + ", largura_cisterna=" + largura_cisterna
-				+ ", profundidade_cisterna=" + profundidade_cisterna + ", comprimento_cisterna=" + comprimento_cisterna
-				+ ", capacidade_cisterna=" + capacidade_cisterna + ", cisternas=" + cisternas + ", quantLitrosAgua="
-				+ quantLitrosAgua + "]";
+		return "Cisterna [id=" + id + ", larguraCisterna=" + larguraCisterna + ", profundidadeCisterna="
+				+ profundidadeCisterna + ", comprimentoCisterna=" + comprimentoCisterna + ", capacidadeCisterna="
+				+ capacidadeCisterna + ", cisternas=" + cisternas + "]";
+	}
+	public Cisterna(Long id, Double larguraCisterna, Double profundidadeCisterna, Double comprimentoCisterna,
+			Double capacidadeCisterna, ArrayList<Cisterna> cisternas) {
+		super();
+		this.id = id;
+		this.larguraCisterna = larguraCisterna;
+		this.profundidadeCisterna = profundidadeCisterna;
+		this.comprimentoCisterna = comprimentoCisterna;
+		this.capacidadeCisterna = capacidadeCisterna;
+		this.cisternas = cisternas;
 	}
 	public Cisterna() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
 }
 	
 	
-
-		
-
-
-
+	

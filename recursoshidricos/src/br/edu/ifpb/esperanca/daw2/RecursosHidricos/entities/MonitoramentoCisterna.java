@@ -10,39 +10,26 @@ import javax.persistence.OneToMany;
 @Entity
 public class MonitoramentoCisterna implements Identificavel {
 	@Id
-	private Long id_monitoramento;
+	private Long idMonitoramento;
 	private Date monitoramento;
-	private Double quant_AguaGasta_Tempo;
-	private Double quant_AguaEconomizada_Tempo;
+	private Double quantAguaGastaTempo;
+	private Double quantAguaEconomizadaTempo;
 	
 	
 	
 
-	@OneToMany(mappedBy = "quant_litros_agua")
-	private Set<AtualizacaoCisterna> agua_gasta;
+	@OneToMany(mappedBy = "quantLitrosAgua")
+	private Set<AtualizacaoCisterna> aguaGasta;
 
-	@OneToMany(mappedBy = "quant_litros_agua")
-	private Set<AtualizacaoCisterna> agua_economizada;
+	@OneToMany(mappedBy = "quantLitrosAgua")
+	private Set<AtualizacaoCisterna> aguaEconomizada;
 
-	@Override
-	public Long getId() {
-		// TODO Auto-generated method stub
-		return null;
+	public Long getIdMonitoramento() {
+		return idMonitoramento;
 	}
 
-	@Override
-	public void setId(Long id) {
-		// TODO Auto-generated method stub
-		
-		
-	}
-
-	public Long getId_monitoramento() {
-		return id_monitoramento;
-	}
-
-	public void setId_monitoramento(Long id_monitoramento) {
-		this.id_monitoramento = id_monitoramento;
+	public void setIdMonitoramento(Long idMonitoramento) {
+		this.idMonitoramento = idMonitoramento;
 	}
 
 	public Date getMonitoramento() {
@@ -53,48 +40,48 @@ public class MonitoramentoCisterna implements Identificavel {
 		this.monitoramento = monitoramento;
 	}
 
-	public Double getQuant_AguaGasta_Tempo() {
-		return quant_AguaGasta_Tempo;
+	public Double getQuantAguaGastaTempo() {
+		return quantAguaGastaTempo;
 	}
 
-	public void setQuant_AguaGasta_Tempo(Double quant_AguaGasta_Tempo) {
-		this.quant_AguaGasta_Tempo = quant_AguaGasta_Tempo;
+	public void setQuantAguaGastaTempo(Double quantAguaGastaTempo) {
+		this.quantAguaGastaTempo = quantAguaGastaTempo;
 	}
 
-	public Double getQuant_AguaEconomizada_Tempo() {
-		return quant_AguaEconomizada_Tempo;
+	public Double getQuantAguaEconomizadaTempo() {
+		return quantAguaEconomizadaTempo;
 	}
 
-	public void setQuant_AguaEconomizada_Tempo(Double quant_AguaEconomizada_Tempo) {
-		this.quant_AguaEconomizada_Tempo = quant_AguaEconomizada_Tempo;
+	public void setQuantAguaEconomizadaTempo(Double quantAguaEconomizadaTempo) {
+		this.quantAguaEconomizadaTempo = quantAguaEconomizadaTempo;
 	}
 
-	public Set<AtualizacaoCisterna> getAgua_gasta() {
-		return agua_gasta;
+	public Set<AtualizacaoCisterna> getAguaGasta() {
+		return aguaGasta;
 	}
 
-	public void setAgua_gasta(Set<AtualizacaoCisterna> agua_gasta) {
-		this.agua_gasta = agua_gasta;
+	public void setAguaGasta(Set<AtualizacaoCisterna> aguaGasta) {
+		this.aguaGasta = aguaGasta;
 	}
 
-	public Set<AtualizacaoCisterna> getAgua_economizada() {
-		return agua_economizada;
+	public Set<AtualizacaoCisterna> getAguaEconomizada() {
+		return aguaEconomizada;
 	}
 
-	public void setAgua_economizada(Set<AtualizacaoCisterna> agua_economizada) {
-		this.agua_economizada = agua_economizada;
+	public void setAguaEconomizada(Set<AtualizacaoCisterna> aguaEconomizada) {
+		this.aguaEconomizada = aguaEconomizada;
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((agua_economizada == null) ? 0 : agua_economizada.hashCode());
-		result = prime * result + ((agua_gasta == null) ? 0 : agua_gasta.hashCode());
-		result = prime * result + ((id_monitoramento == null) ? 0 : id_monitoramento.hashCode());
+		result = prime * result + ((aguaEconomizada == null) ? 0 : aguaEconomizada.hashCode());
+		result = prime * result + ((aguaGasta == null) ? 0 : aguaGasta.hashCode());
+		result = prime * result + ((idMonitoramento == null) ? 0 : idMonitoramento.hashCode());
 		result = prime * result + ((monitoramento == null) ? 0 : monitoramento.hashCode());
-		result = prime * result + ((quant_AguaEconomizada_Tempo == null) ? 0 : quant_AguaEconomizada_Tempo.hashCode());
-		result = prime * result + ((quant_AguaGasta_Tempo == null) ? 0 : quant_AguaGasta_Tempo.hashCode());
+		result = prime * result + ((quantAguaEconomizadaTempo == null) ? 0 : quantAguaEconomizadaTempo.hashCode());
+		result = prime * result + ((quantAguaGastaTempo == null) ? 0 : quantAguaGastaTempo.hashCode());
 		return result;
 	}
 
@@ -107,57 +94,56 @@ public class MonitoramentoCisterna implements Identificavel {
 		if (getClass() != obj.getClass())
 			return false;
 		MonitoramentoCisterna other = (MonitoramentoCisterna) obj;
-		if (agua_economizada == null) {
-			if (other.agua_economizada != null)
+		if (aguaEconomizada == null) {
+			if (other.aguaEconomizada != null)
 				return false;
-		} else if (!agua_economizada.equals(other.agua_economizada))
+		} else if (!aguaEconomizada.equals(other.aguaEconomizada))
 			return false;
-		if (agua_gasta == null) {
-			if (other.agua_gasta != null)
+		if (aguaGasta == null) {
+			if (other.aguaGasta != null)
 				return false;
-		} else if (!agua_gasta.equals(other.agua_gasta))
+		} else if (!aguaGasta.equals(other.aguaGasta))
 			return false;
-		if (id_monitoramento == null) {
-			if (other.id_monitoramento != null)
+		if (idMonitoramento == null) {
+			if (other.idMonitoramento != null)
 				return false;
-		} else if (!id_monitoramento.equals(other.id_monitoramento))
+		} else if (!idMonitoramento.equals(other.idMonitoramento))
 			return false;
 		if (monitoramento == null) {
 			if (other.monitoramento != null)
 				return false;
 		} else if (!monitoramento.equals(other.monitoramento))
 			return false;
-		if (quant_AguaEconomizada_Tempo == null) {
-			if (other.quant_AguaEconomizada_Tempo != null)
+		if (quantAguaEconomizadaTempo == null) {
+			if (other.quantAguaEconomizadaTempo != null)
 				return false;
-		} else if (!quant_AguaEconomizada_Tempo.equals(other.quant_AguaEconomizada_Tempo))
+		} else if (!quantAguaEconomizadaTempo.equals(other.quantAguaEconomizadaTempo))
 			return false;
-		if (quant_AguaGasta_Tempo == null) {
-			if (other.quant_AguaGasta_Tempo != null)
+		if (quantAguaGastaTempo == null) {
+			if (other.quantAguaGastaTempo != null)
 				return false;
-		} else if (!quant_AguaGasta_Tempo.equals(other.quant_AguaGasta_Tempo))
+		} else if (!quantAguaGastaTempo.equals(other.quantAguaGastaTempo))
 			return false;
 		return true;
 	}
 
 	@Override
 	public String toString() {
-		return "MonitoramentoCisterna [id_monitoramento=" + id_monitoramento + ", monitoramento=" + monitoramento
-				+ ", quant_AguaGasta_Tempo=" + quant_AguaGasta_Tempo + ", quant_AguaEconomizada_Tempo="
-				+ quant_AguaEconomizada_Tempo + ", agua_gasta=" + agua_gasta + ", agua_economizada=" + agua_economizada
-				+ "]";
+		return "MonitoramentoCisterna [idMonitoramento=" + idMonitoramento + ", monitoramento=" + monitoramento
+				+ ", quantAguaGastaTempo=" + quantAguaGastaTempo + ", quantAguaEconomizadaTempo="
+				+ quantAguaEconomizadaTempo + ", aguaGasta=" + aguaGasta + ", aguaEconomizada=" + aguaEconomizada + "]";
 	}
 
-	public MonitoramentoCisterna(Long id_monitoramento, Date monitoramento, Double quant_AguaGasta_Tempo,
-			Double quant_AguaEconomizada_Tempo, Set<AtualizacaoCisterna> agua_gasta,
-			Set<AtualizacaoCisterna> agua_economizada) {
+	public MonitoramentoCisterna(Long idMonitoramento, Date monitoramento, Double quantAguaGastaTempo,
+			Double quantAguaEconomizadaTempo, Set<AtualizacaoCisterna> aguaGasta,
+			Set<AtualizacaoCisterna> aguaEconomizada) {
 		super();
-		this.id_monitoramento = id_monitoramento;
+		this.idMonitoramento = idMonitoramento;
 		this.monitoramento = monitoramento;
-		this.quant_AguaGasta_Tempo = quant_AguaGasta_Tempo;
-		this.quant_AguaEconomizada_Tempo = quant_AguaEconomizada_Tempo;
-		this.agua_gasta = agua_gasta;
-		this.agua_economizada = agua_economizada;
+		this.quantAguaGastaTempo = quantAguaGastaTempo;
+		this.quantAguaEconomizadaTempo = quantAguaEconomizadaTempo;
+		this.aguaGasta = aguaGasta;
+		this.aguaEconomizada = aguaEconomizada;
 	}
 
 	public MonitoramentoCisterna() {
@@ -165,6 +151,19 @@ public class MonitoramentoCisterna implements Identificavel {
 		// TODO Auto-generated constructor stub
 	}
 
+	@Override
+	public Long getId() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void setId(Long id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
 	}
 
 	

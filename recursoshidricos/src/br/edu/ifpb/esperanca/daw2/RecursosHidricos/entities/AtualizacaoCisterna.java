@@ -10,28 +10,30 @@ import javax.persistence.ManyToOne;
 public class AtualizacaoCisterna implements Identificavel {
 
 	@Id
-	private Long id_atualização;
-	private Date periodo_agua_atualizada;
+	private Long idAtualização;
+	private Date periodoAguaAtualizada;
 
 	@ManyToOne
 	private Cisterna cisterna;
+	private Integer quantLitrosAgua;
+	
+	
+	
 
-	private Integer quant_litros_agua;
-
-	public Long getId_atualização() {
-		return id_atualização;
+	public Long getIdAtualização() {
+		return idAtualização;
 	}
 
-	public void setId_atualização(Long id_atualização) {
-		this.id_atualização = id_atualização; 
+	public void setIdAtualização(Long idAtualização) {
+		this.idAtualização = idAtualização;
 	}
 
-	public Date getPeriodo_agua_atualizada() {
-		return periodo_agua_atualizada;
+	public Date getPeriodoAguaAtualizada() {
+		return periodoAguaAtualizada;
 	}
 
-	public void setPeriodo_agua_atualizada(Date periodo_agua_atualizada) {
-		this.periodo_agua_atualizada = periodo_agua_atualizada;
+	public void setPeriodoAguaAtualizada(Date periodoAguaAtualizada) {
+		this.periodoAguaAtualizada = periodoAguaAtualizada;
 	}
 
 	public Cisterna getCisterna() {
@@ -42,43 +44,12 @@ public class AtualizacaoCisterna implements Identificavel {
 		this.cisterna = cisterna;
 	}
 
-	public Integer getQuant_litros_agua() {
-		return quant_litros_agua;
+	public Integer getQuantLitrosAgua() {
+		return quantLitrosAgua;
 	}
 
-	public void setQuant_litros_agua(Integer quant_litros_agua) {
-		this.quant_litros_agua = quant_litros_agua;
-	}
-
-	public AtualizacaoCisterna() {
-		super();
-	}
-
-	public AtualizacaoCisterna(Long id_atualização, Date periodo_agua_atualizada, Cisterna cisterna,
-			Integer quant_litros_agua) {
-		super();
-		this.id_atualização = id_atualização;
-		this.periodo_agua_atualizada = periodo_agua_atualizada;
-		this.cisterna = cisterna;
-		this.quant_litros_agua = quant_litros_agua;
-	}
-
-	@Override
-	public Long getId() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void setId(Long id) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public String toString() {
-		return "AtualizacaoCisterna [id_atualização=" + id_atualização + ", periodo_agua_atualizada="
-				+ periodo_agua_atualizada + ", cisterna=" + cisterna + ", quant_litros_agua=" + quant_litros_agua + "]";
+	public void setQuantLitrosAgua(Integer quantLitrosAgua) {
+		this.quantLitrosAgua = quantLitrosAgua;
 	}
 
 	@Override
@@ -86,9 +57,9 @@ public class AtualizacaoCisterna implements Identificavel {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((cisterna == null) ? 0 : cisterna.hashCode());
-		result = prime * result + ((id_atualização == null) ? 0 : id_atualização.hashCode());
-		result = prime * result + ((periodo_agua_atualizada == null) ? 0 : periodo_agua_atualizada.hashCode());
-		result = prime * result + ((quant_litros_agua == null) ? 0 : quant_litros_agua.hashCode());
+		result = prime * result + ((idAtualização == null) ? 0 : idAtualização.hashCode());
+		result = prime * result + ((periodoAguaAtualizada == null) ? 0 : periodoAguaAtualizada.hashCode());
+		result = prime * result + ((quantLitrosAgua == null) ? 0 : quantLitrosAgua.hashCode());
 		return result;
 	}
 
@@ -106,25 +77,48 @@ public class AtualizacaoCisterna implements Identificavel {
 				return false;
 		} else if (!cisterna.equals(other.cisterna))
 			return false;
-		if (id_atualização == null) {
-			if (other.id_atualização != null)
+		if (idAtualização == null) {
+			if (other.idAtualização != null)
 				return false;
-		} else if (!id_atualização.equals(other.id_atualização))
+		} else if (!idAtualização.equals(other.idAtualização))
 			return false;
-		if (periodo_agua_atualizada == null) {
-			if (other.periodo_agua_atualizada != null)
+		if (periodoAguaAtualizada == null) {
+			if (other.periodoAguaAtualizada != null)
 				return false;
-		} else if (!periodo_agua_atualizada.equals(other.periodo_agua_atualizada))
+		} else if (!periodoAguaAtualizada.equals(other.periodoAguaAtualizada))
 			return false;
-		if (quant_litros_agua == null) {
-			if (other.quant_litros_agua != null)
+		if (quantLitrosAgua == null) {
+			if (other.quantLitrosAgua != null)
 				return false;
-		} else if (!quant_litros_agua.equals(other.quant_litros_agua))
+		} else if (!quantLitrosAgua.equals(other.quantLitrosAgua))
 			return false;
 		return true;
 	}
 
-	
+	public AtualizacaoCisterna(Long idAtualização, Date periodoAguaAtualizada, Cisterna cisterna,
+			Integer quantLitrosAgua) {
+		super();
+		this.idAtualização = idAtualização;
+		this.periodoAguaAtualizada = periodoAguaAtualizada;
+		this.cisterna = cisterna;
+		this.quantLitrosAgua = quantLitrosAgua;
+	}
+
+	public AtualizacaoCisterna() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public Long getId() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void setId(Long id) {
+		// TODO Auto-generated method stub
+		
+	}
 
 }
-

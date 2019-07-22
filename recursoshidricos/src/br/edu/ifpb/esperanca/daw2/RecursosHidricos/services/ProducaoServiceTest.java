@@ -19,8 +19,8 @@ class ProducaoServiceTest {
 		Producao p = new Producao ();
 		p.setCultivoPlantado("cultivoPlantado");
 		p.setDataDoPlantio ( new Date(2019, 6,21));
-		p.setQuant_Agua_Gasta(1000.00);
-		p.setQuant_Plantada_P_Area(5000.00);
+		p.setQuantAguaGasta(1000.00);
+		p.setQuantPlantadaPArea(5000.00);
 		service.save(p);
 		assertNotNull(p.getId());
 		Producao outro = service.getByID(p.getId());
