@@ -20,7 +20,6 @@ public class Cisterna implements Identificavel {
 	private Double profundidadeCisterna;
 	private Double comprimentoCisterna;
 	private Double capacidadeCisterna;
-	//private ArrayList<Cisterna> cisternas;
 	public Long getId() {
 		return id;
 	}
@@ -51,18 +50,11 @@ public class Cisterna implements Identificavel {
 	public void setCapacidadeCisterna(Double capacidadeCisterna) {
 		this.capacidadeCisterna = capacidadeCisterna;
 	}
-	public ArrayList<Cisterna> getCisternas() {
-		return cisternas;
-	}
-	public void setCisternas(ArrayList<Cisterna> cisternas) {
-		this.cisternas = cisternas;
-	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((capacidadeCisterna == null) ? 0 : capacidadeCisterna.hashCode());
-		result = prime * result + ((cisternas == null) ? 0 : cisternas.hashCode());
 		result = prime * result + ((comprimentoCisterna == null) ? 0 : comprimentoCisterna.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		result = prime * result + ((larguraCisterna == null) ? 0 : larguraCisterna.hashCode());
@@ -82,11 +74,6 @@ public class Cisterna implements Identificavel {
 			if (other.capacidadeCisterna != null)
 				return false;
 		} else if (!capacidadeCisterna.equals(other.capacidadeCisterna))
-			return false;
-		if (cisternas == null) {
-			if (other.cisternas != null)
-				return false;
-		} else if (!cisternas.equals(other.cisternas))
 			return false;
 		if (comprimentoCisterna == null) {
 			if (other.comprimentoCisterna != null)
@@ -114,17 +101,16 @@ public class Cisterna implements Identificavel {
 	public String toString() {
 		return "Cisterna [id=" + id + ", larguraCisterna=" + larguraCisterna + ", profundidadeCisterna="
 				+ profundidadeCisterna + ", comprimentoCisterna=" + comprimentoCisterna + ", capacidadeCisterna="
-				+ capacidadeCisterna + ", cisternas=" + cisternas + "]";
+				+ capacidadeCisterna + "]";
 	}
 	public Cisterna(Long id, Double larguraCisterna, Double profundidadeCisterna, Double comprimentoCisterna,
-			Double capacidadeCisterna, ArrayList<Cisterna> cisternas) {
+			Double capacidadeCisterna) {
 		super();
 		this.id = id;
 		this.larguraCisterna = larguraCisterna;
 		this.profundidadeCisterna = profundidadeCisterna;
 		this.comprimentoCisterna = comprimentoCisterna;
 		this.capacidadeCisterna = capacidadeCisterna;
-		this.cisternas = cisternas;
 	}
 	public Cisterna() {
 		super();
@@ -132,6 +118,3 @@ public class Cisterna implements Identificavel {
 	}
 	
 }
-	
-	
-	
