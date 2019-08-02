@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.Collection;
 
 import javax.annotation.PostConstruct;
+import javax.faces.bean.SessionScoped;
 import javax.faces.bean.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -13,6 +14,7 @@ import br.edu.ifpb.esperanca.daw2.RecursosHidricos.services.UsuarioService;
 
 
 @ViewScoped
+@SessionScoped
 @Named
 public class UsuarioBean implements Serializable {
 
